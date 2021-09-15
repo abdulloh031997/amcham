@@ -23,8 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('backend.index',[
-            'is_active' => 'index',
-        ]);
+        return view('home');
     }
 }

@@ -20,13 +20,13 @@ class LoginController extends Controller
     */
 
     use AuthenticatesUsers;
-
+    protected $redirectTo = '/admin';
     /**
      * Where to redirect users after login.
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    // protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
