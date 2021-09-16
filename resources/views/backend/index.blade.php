@@ -18,28 +18,67 @@
       </div><!-- /.container-fluid -->
     </div>
 <h2 class="font-weight-bold text-center" style="color:#ff5e00;font-size:28px;text-transform:uppercase"><a href="">Amcham Uzbekistan</a></h2>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-md-3">
-            <div class="card">
-                <h4 class="p-5 text-uppercase font-weight-bold" style="color:#ff5e00;background-color:#113372"><i class="fa fa-home"></i>1</h4>
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="info-box">
+            <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">CPU Traffic</span>
+              <span class="info-box-number">
+                10
+                <small>%</small>
+              </span>
             </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
         </div>
-        <div class="col-md-3">
-            <div class="card">
-                <h4 class="p-5 text-uppercase font-weight-bold" style="color:#ff5e00;background-color:#113372"><i class="fa fa-plus fa-lg"></i>1</h4>
+        <!-- /.col -->
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="info-box mb-3">
+            <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Likes</span>
+              <span class="info-box-number">41,410</span>
             </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
         </div>
-        <div class="col-md-3">
-            <div class="card">
-                <h4 class="p-5 text-uppercase font-weight-bold" style="color:#ff5e00;background-color:#113372"><i class="fa fa-eye"></i>3</h4>
+        <!-- /.col -->
+
+        <!-- fix for small devices only -->
+        <div class="clearfix hidden-md-up"></div>
+
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="info-box mb-3">
+            <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Sales</span>
+              <span class="info-box-number">760</span>
             </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
         </div>
-        <div class="col-md-3">
-            <div class="card">
-                <h4 class="p-5 text-uppercase font-weight-bold" style="color:#ff5e00;background-color:#113372"><i class="fa fa-edit"></i>4</h4>
+        <!-- /.col -->
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="info-box mb-3">
+            <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">New Members</span>
+              <span class="info-box-number">2,000</span>
             </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
         </div>
-    </div>
+        <!-- /.col -->
+      </div>
 </div>
 @endsection

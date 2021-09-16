@@ -14,9 +14,21 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
+        Schema::create('roles', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->timestamps();
+        });
+        DB::table('roles')->insert([
+            'name' => 'admin',
+        ]);
+        DB::table('roles')->insert([
+            'name' => 'user',
+        ]);
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->integer('role_id');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
@@ -24,11 +36,11 @@ class CreateUsersTable extends Migration
             $table->timestamps();
         });
         DB::table('users')->insert([
-            'name' => 'admin',
-            'email' => 'admin@gmail.com',
+            'name' => 'Amcham Admin',
+            'role_id' => 1,
+            'email' => 'info@amcham.uz',
             'password' => Hash::make('123456789'),
-        ]
-        );
+        ]);
     }
 
     /**
