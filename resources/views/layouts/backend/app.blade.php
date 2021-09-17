@@ -27,7 +27,7 @@
     @include('layouts.backend.sidebar')
     <section class="content">
         <div class="container-fluid" id="upload">
-            <main id="app">
+            <main id="app" class="content-wrapper px-3">
                 @yield('content')
             </main>
         </div>
@@ -47,5 +47,6 @@
     <script src="{{asset('dist/js/adminlte.js')}}"></script>
     <script src="{{asset('dist/js/demo.js')}}"></script>
     <script src="{{asset('dist/js/pages/dashboard.js')}}"></script>
+        
 </body>
 </html>

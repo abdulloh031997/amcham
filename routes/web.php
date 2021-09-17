@@ -20,5 +20,6 @@ Route::get('/', function () {
 Auth::routes();
 // Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::prefix('admin')->group(function () {
-    Route::get('/', [App\Http\Controllers\AdminController\BackendController::class, 'index']);
+    Route::get('/', [App\Http\Controllers\Admin\BackendController::class, 'index']);
+    Route::get('/menu', [App\Http\Controllers\Admin\MenuController::class, 'index']);
 });

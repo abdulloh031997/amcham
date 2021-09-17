@@ -52,7 +52,7 @@ $lang = App::getLocale();
                 <tbody>
 
                     @forelse($galleries as $gallery)
-                        @php 
+                        @php
                             $menu = App\Album::find($gallery->album_id);
                         @endphp
                         <tr>
