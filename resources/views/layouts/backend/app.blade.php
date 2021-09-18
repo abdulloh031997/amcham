@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{asset('plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
     <link rel="stylesheet" href="{{asset('plugins/daterangepicker/daterangepicker.css')}}">
     <link rel="stylesheet" href="{{asset('plugins/summernote/summernote-bs4.min.css')}}">
+    <link rel="stylesheet" href="{{asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
     <script src="{{ asset('js/app.js') }}"></script>
 
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -47,6 +48,6 @@
     <script src="{{asset('dist/js/adminlte.js')}}"></script>
     <script src="{{asset('dist/js/demo.js')}}"></script>
     <script src="{{asset('dist/js/pages/dashboard.js')}}"></script>
-        
+
 </body>
 </html>

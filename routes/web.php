@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\RoleController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,4 +24,5 @@ Auth::routes();
 Route::prefix('admin')->group(function () {
     Route::get('/', [App\Http\Controllers\Admin\BackendController::class, 'index']);
     Route::get('/menu', [App\Http\Controllers\Admin\MenuController::class, 'index']);
+    Route::resource('roles', RoleController::class);
 });

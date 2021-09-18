@@ -24,97 +24,180 @@
                 <div class="card-tools">
                     <a name="" id="" class="btn btn-primary font-weight-bold text-uppercase" href="#" role="button"><i class="fa fa-plus"></i> Add</a>
                 </div>
-                <!-- /.card-tools -->
               </div>
+              <div class="card-header">
+               <div style="display:flex; justify-content:space-between">
+                <div class="d-flex">
+                        <div class="form-group">
+                        <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                            <option>10</option>
+                            <option>20</option>
+                            <option>50</option>
+                            <option>100</option>
+                            <option>All</option>
+                        </select>
+                        </div>
+                        &nbsp;&nbsp;
+                        <div class="form-group">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default"><i class="fa fa-trash-alt"></i></button>
+                                <button type="button" class="btn btn-default"><i class="fa fa-eye"></i></button>
+                                <button type="button" class="btn btn-default"><i class="fa fa-trash-restore"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="float-right">
+                        <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <div class="input-group-append">
+                            <div class="btn btn-primary">
+                            <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+               <div class="table">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="checkbox" id="checkboxPrimary2">
+                                        <label for="checkboxPrimary2">
+                                        </label>
+                                    </div>
+                                </th>
+                                <th>Name</th>
+                                <th>Link</th>
+                                <th>Order</th>
+                                <th>Status</th>
+                                <th>Position</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="checkbox" id="checkboxPrimary12">
+                                        <label for="checkboxPrimary12">
+                                        </label>
+                                    </div>
+                                </th>
+                                <th>Home</th>
+                                <th><a href="http://amcham.uz/site/index">site/index</a></th>
+                                <th>1</th>
+                                <th>
+                                    <a href="" class="btn btn-success btn-sm">Active</a>
+                                </th>
+                                <th>Header</th>
+                                <th>
+                                    <a href="" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+                                    <a href="" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa fa-trash-restore"></i></a>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="checkbox" id="checkboxPrimary112">
+                                        <label for="checkboxPrimary112">
+                                        </label>
+                                    </div>
+                                </th>
+                                <th>About</th>
+                                <th><a href="http://amcham.uz/site/index">site/index</a></th>
+                                <th>1</th>
+                                <th>
+                                    <a href="" class="btn btn-danger btn-sm">InActive</a>
+                                </th>
+                                <th>Header</th>
+                                <th>
+                                    <a href="" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+                                    <a href="" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa fa-trash-restore"></i></a>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="checkbox" id="checkboxPrimary1112">
+                                        <label for="checkboxPrimary1112">
+                                        </label>
+                                    </div>
+                                </th>
+                                <th>Service</th>
+                                <th><a href="http://amcham.uz/site/index">site/index</a></th>
+                                <th>1</th>
+                                <th>
+                                    <a href="" class="btn btn-success btn-sm">Active</a>
+                                </th>
+                                <th>Header</th>
+                                <th>
+                                    <a href="" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+                                    <a href="" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa fa-trash-restore"></i></a>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="checkbox" id="checkboxPrimary21">
+                                        <label for="checkboxPrimary21">
+                                        </label>
+                                    </div>
+                                </th>
+                                <th>Team</th>
+                                <th><a href="http://amcham.uz/site/index">site/index</a></th>
+                                <th>1</th>
+                                <th>
+                                    <a href="" class="btn btn-success btn-sm">Active</a>
+                                </th>
+                                <th>Header</th>
+                                <th>
+                                    <a href="" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+                                    <a href="" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa fa-trash-restore"></i></a>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="checkbox" id="checkboxPrimary23">
+                                        <label for="checkboxPrimary23">
+                                        </label>
+                                    </div>
+                                </th>
+                                <th>News</th>
+                                <th><a href="http://amcham.uz/site/index">site/index</a></th>
+                                <th>1</th>
+                                <th>
+                                    <a href="" class="btn btn-success btn-sm">Active</a>
+                                </th>
+                                <th>Header</th>
+                                <th>
+                                    <a href="" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+                                    <a href="" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa fa-trash-restore"></i></a>
+                                </th>
+                            </tr>
 
-              <table id="example2" class="table table-bordered table-hover dataTable dtr-inline" role="grid" aria-describedby="example2_info">
-                <thead>
-                <tr role="row"><th class="sorting sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column descending" aria-sort="ascending">Rendering engine</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">Browser</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Platform(s)</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Engine version</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">CSS grade</th></tr>
-                </thead>
-                <tbody>
-                <tr class="odd">
-                  <td class="dtr-control sorting_1" tabindex="0">Gecko</td>
-                  <td>Firefox 1.0</td>
-                  <td>Win 98+ / OSX.2+</td>
-                  <td>1.7</td>
-                  <td>A</td>
-                </tr><tr class="even">
-                  <td class="dtr-control sorting_1" tabindex="0">Gecko</td>
-                  <td>Firefox 1.5</td>
-                  <td>Win 98+ / OSX.2+</td>
-                  <td>1.8</td>
-                  <td>A</td>
-                </tr><tr class="odd">
-                  <td class="dtr-control sorting_1" tabindex="0">Gecko</td>
-                  <td>Firefox 2.0</td>
-                  <td>Win 98+ / OSX.2+</td>
-                  <td>1.8</td>
-                  <td>A</td>
-                </tr><tr class="even">
-                  <td class="dtr-control sorting_1" tabindex="0">Gecko</td>
-                  <td>Firefox 3.0</td>
-                  <td>Win 2k+ / OSX.3+</td>
-                  <td>1.9</td>
-                  <td>A</td>
-                </tr><tr class="odd">
-                  <td class="dtr-control sorting_1" tabindex="0">Gecko</td>
-                  <td>Camino 1.0</td>
-                  <td>OSX.2+</td>
-                  <td>1.8</td>
-                  <td>A</td>
-                </tr><tr class="even">
-                  <td class="dtr-control sorting_1" tabindex="0">Gecko</td>
-                  <td>Camino 1.5</td>
-                  <td>OSX.3+</td>
-                  <td>1.8</td>
-                  <td>A</td>
-                </tr><tr class="odd">
-                  <td class="dtr-control sorting_1" tabindex="0">Gecko</td>
-                  <td>Netscape 7.2</td>
-                  <td>Win 95+ / Mac OS 8.6-9.2</td>
-                  <td>1.7</td>
-                  <td>A</td>
-                </tr><tr class="even">
-                  <td class="dtr-control sorting_1" tabindex="0">Gecko</td>
-                  <td>Netscape Browser 8</td>
-                  <td>Win 98SE+</td>
-                  <td>1.7</td>
-                  <td>A</td>
-                </tr><tr class="odd">
-                  <td class="dtr-control sorting_1" tabindex="0">Gecko</td>
-                  <td>Netscape Navigator 9</td>
-                  <td>Win 98+ / OSX.2+</td>
-                  <td>1.8</td>
-                  <td>A</td>
-                </tr><tr class="even">
-                  <td class="dtr-control sorting_1" tabindex="0">Gecko</td>
-                  <td>Mozilla 1.0</td>
-                  <td>Win 95+ / OSX.1+</td>
-                  <td>1</td>
-                  <td>A</td>
-                </tr></tbody>
-                <tfoot>
-                <tr><th rowspan="1" colspan="1">Rendering engine</th><th rowspan="1" colspan="1">Browser</th><th rowspan="1" colspan="1">Platform(s)</th><th rowspan="1" colspan="1">Engine version</th><th rowspan="1" colspan="1">CSS grade</th></tr>
-                </tfoot>
-              </table>
+                        </tbody>
+                        <tfoot>
+                            <tr class="text-center">
+                                <td colspan="7"><h3 class="text-center font-weight-bold">No records in here :(</h3></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+              </div>
             </div>
-            <!-- /.card -->
-          </div>
+        </div>
+
     </div>
 
 @endsection
-
 @push('stylesheet')
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.0.3/css/buttons.dataTables.min.css">
-@endpush
 @push('javascript')
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
-    <script src="https:///cdn.datatables.net/select/1.3.0/js/select.bootstrap4.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.0.3/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
-
 @endpush
