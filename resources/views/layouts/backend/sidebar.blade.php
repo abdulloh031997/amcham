@@ -1,156 +1,79 @@
- <!-- Main Sidebar Container -->
- <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="#" class="brand-link">
-      {{-- <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-bold" style="font-size: 18px">AMCHAM UZBEKISTAN</span> --}}
-      <img src="{{asset('amcham_logo.png')}}">
-    </a>
-
-    <!-- Sidebar -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="nav-item">
-            <a href="" class="nav-link text-white font-weight-bold text-uppercase">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Dashboard
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-uppercase text-light">
-              <i class="nav-icon fas fa-table"></i>
-              <p>
-                Article and News
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link text-uppercase text-light">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Category</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link text-light text-uppercase">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Article and news</p>
-                </a>
-              </li>
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-inner slimscroll">
+        <div id="sidebar-menu" class="sidebar-menu">
+            <ul>
+                <li class="active"> <a href="/admin"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a> </li>
+                <li class="list-divider"></li>
+                <li class="submenu"> <a href="#"><i class="fas fa-table"></i> <span> Blog </span> <span class="menu-arrow"></span></a>
+                    <ul class="submenu_class" style="display: none;">
+                        <li><a href="#">Category </a></li>
+                        <li><a href="#">Post and Article</a></li>
+                    </ul>
+                </li>
+                <li> <a href="{{route('menus.index')}}"><i class="far fa-money-bill-alt"></i> <span>Menu</span></a> </li>
+                <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Employees </span> <span class="menu-arrow"></span></a>
+                    <ul class="submenu_class" style="display: none;">
+                        <li><a href="#">Employees List </a></li>
+                        <li><a href="#">Leaves </a></li>
+                        <li><a href="#">Holidays </a></li>
+                        <li><a href="#">Attendance </a></li>
+                    </ul>
+                </li>
+                <li> <a href=""><i class="fas fa-calendar-alt"></i> <span>Calendar</span></a> </li>
+                <li class="submenu"> <a href="#"><i class="fe fe-table"></i> <span> Partners </span> <span class="menu-arrow"></span></a>
+                    <ul class="submenu_class" style="display: none;">
+                        <li><a href="">Add</a></li>
+                        <li><a href="">Partners List</a></li>
+                        <li><a href="">Organizations List </a></li>
+                    </ul>
+                </li>
+                <li> <a href=""><i class="fas fa-cog"></i> <span>Settings</span></a> </li>
+                <li class="list-divider"></li>
+                <li class="menu-title mt-3"> <span>UI ELEMENTS</span> </li>
+                <li class="submenu"> <a href="#"><i class="fas fa-laptop"></i> <span> Components </span> <span class="menu-arrow"></span></a>
+                    <ul class="submenu_class" style="display: none;">
+                        <li><a href="uikit.html">UI Kit </a></li>
+                        <li><a href="typography.html">Typography </a></li>
+                        <li><a href="tabs.html">Tabs </a></li>
+                    </ul>
+                </li>
+                <li class="submenu"> <a href="#"><i class="fas fa-edit"></i> <span> Forms </span> <span class="menu-arrow"></span></a>
+                    <ul class="submenu_class" style="display: none;">
+                        <li><a href="form-basic-inputs.html">Basic Input </a></li>
+                        <li><a href="form-input-groups.html">Input Groups </a></li>
+                        <li><a href="form-horizontal.html">Horizontal Form </a></li>
+                        <li><a href="form-vertical.html">Vertical Form </a></li>
+                    </ul>
+                </li>
+                <li class="submenu"> <a href="#"><i class="fas fa-table"></i> <span> Tables </span> <span class="menu-arrow"></span></a>
+                    <ul class="submenu_class" style="display: none;">
+                        <li><a href="tables-basic.html">Basic Table </a></li>
+                        <li><a href="tables-datatables.html">Data Table </a></li>
+                    </ul>
+                </li>
+                <li class="list-divider"></li>
+                <li class="menu-title mt-3"> <span>EXTRAS</span> </li>
+                <li class="submenu"> <a href="#"><i class="fas fa-columns"></i> <span> Pages </span> <span class="menu-arrow"></span></a>
+                    <ul class="submenu_class" style="display: none;">
+                        <li><a href="login.html">Login </a></li>
+                        <li><a href="register.html">Register </a></li>
+                        <li><a href="forgot-password.html">Forgot Password </a></li>
+                        <li><a href="change-password.html">Change Password </a></li>
+                        <li><a href="lock-screen.html">Lockscreen </a></li>
+                        <li><a href="profile.html">Profile </a></li>
+                        <li><a href="gallery.html">Gallery </a></li>
+                        <li><a href="error-404.html">404 Error </a></li>
+                        <li><a href="error-500.html">500 Error </a></li>
+                        <li><a href="blank-page.html">Blank Page </a></li>
+                    </ul>
+                </li>
+                <li class="submenu"> <a href="#"><i class="fas fa-share-alt"></i> <span> Multi Level </span> <span class="menu-arrow"></span></a>
+                    <ul class="submenu_class" style="display: none;">
+                        <li><a href="">Level 1 </a></li>
+                        <li><a href="">Level 2 </a></li>
+                    </ul>
+                </li>
             </ul>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link text-white font-weight-bold text-uppercase">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                MENU
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link text-white font-weight-bold text-uppercase">
-              <i class="nav-icon fas fa-book"></i>
-              <p>
-                pages
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link text-white font-weight-bold text-uppercase">
-              <i class="nav-icon fas fa-columns"></i>
-              <p>
-                Banner
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link text-white font-weight-bold text-uppercase">
-              <i class="far fa-circle nav-icon"></i>
-              <p>
-                VOTING MEMBERS
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link text-white font-weight-bold text-uppercase">
-              <i class="fas fa-circle nav-icon"></i>
-              <p>
-                OUR PARTNERS
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-uppercase text-light">
-              <i class="nav-icon fas fa-table"></i>
-              <p>
-                team
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link text-uppercase text-light">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Category</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link text-light text-uppercase">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Team</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link text-white font-weight-bold text-uppercase">
-              <i class="fas fa-circle nav-icon"></i>
-              <p>
-                PUBLICATIONS
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link text-white font-weight-bold text-uppercase">
-              <i class="fas fa-circle nav-icon"></i>
-              <p>
-                USEFUL INFORMATION
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link text-white font-weight-bold text-uppercase">
-              <i class="fas fa-circle nav-icon"></i>
-              <p>
-                Calendar
-              </p>
-            </a>
-          </li>
-
-          <li class="nav-header text-uppercase font-weight-bold text-white">SETTINGS</li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-white text-uppercase font-weight-bolder">
-              <i class="nav-icon far fa-circle text-danger"></i>
-              <p class="text">USERS</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-white text-uppercase font-weight-bolder">
-              <i class="nav-icon far fa-circle text-warning"></i>
-              <p>Language</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-white text-uppercase font-weight-bolder">
-              <i class="nav-icon far fa-circle text-info"></i>
-              <p>Changes</p>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
+        </div>
     </div>
-    <!-- /.sidebar -->
-  </aside>
+</div>

@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\Models\Menu;
+use Brian2694\Toastr\Facades\Toastr;
+use DB;
 class MenuController extends Controller
 {
     public function __construct()
@@ -18,7 +20,45 @@ class MenuController extends Controller
      */
     public function index()
     {
-        return view('backend.menu.index');
+        $result = DB::table('menus')->get();
+        $order = Menu::latest()->first();
+        return view('backend.menus.index',[
+            'result' => $result,
+            'order' => $order,
+            'is_active' => 'menus',
+        ]);
+    }
+    public function search(Request $request)
+    {
+            $order = Menu::latest()->first();
+            $result = DB::table('menus')->get();
+
+                if($request->name)
+                    {
+                        $result = Menu::where('name','LIKE','%'.$request->name.'%')->get();
+                    }
+                    // search by status
+                    if($request->status)
+                    {
+                        $result = Menu::where('status','LIKE','%'.$request->status.'%')->get();
+                    }
+                    // search by name and role name
+                    if($request->name && $request->status)
+                    {
+                        $result = Menu::where('name','LIKE','%'.$request->name.'%')
+                                        ->where('status','LIKE','%'.$request->status.'%')
+                                        ->get();
+                    }
+
+            // echo "<pre>";
+            // print_r($results);
+            // echo "<pre>";
+            return view('backend.menus.index',[
+                'result'=>$result,
+                'order'=>$order
+            ]);
+
+
     }
 
     /**
@@ -28,7 +68,13 @@ class MenuController extends Controller
      */
     public function create()
     {
-        //
+        $menus = Menu::all();
+        $order = Menu::latest()->first();
+        return view('backend.menus.create', [
+            'menus' => $menus,
+            'order' => $order,
+            'is_active' => 'menus',
+        ]);
     }
 
     /**
@@ -39,7 +85,20 @@ class MenuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string',
+            'position'=>'required'
+        ]);
+        $menu = new Menu();
+        $menu->name = $request->name;
+        $menu->url = $request->url;
+        $menu->parent = $request->get('parent');
+        $menu->position = $request->get('position');
+        $menu->order_by = $request->order_by;
+        $menu->save();
+        DB::commit();
+        Toastr::success('Create new account successfully :)','Success');
+        return redirect()->route('menus.index');
     }
 
     /**

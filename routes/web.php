@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\MenuController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,8 @@ Auth::routes();
 // Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::prefix('admin')->group(function () {
     Route::get('/', [App\Http\Controllers\Admin\BackendController::class, 'index']);
-    Route::get('/menu', [App\Http\Controllers\Admin\MenuController::class, 'index']);
     Route::resource('roles', RoleController::class);
+    Route::resource('menus', MenuController::class);
+    Route::post('menus/list', [App\Http\Controllers\Admin\MenuController::class, 'search'])->name('menus/list');
+    Route::post('menus/create', [App\Http\Controllers\Admin\MenuController::class, 'store'])->name('menus/create');
 });
