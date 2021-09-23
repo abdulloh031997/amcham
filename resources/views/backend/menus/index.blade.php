@@ -11,6 +11,7 @@ $i = 1;
         </ul>
     </div>
 </div>
+{!! Toastr::message() !!}
 <div class="page-header">
     <div class="row align-items-center">
         <div class="col">
@@ -121,7 +122,6 @@ $i = 1;
         </div>
 
     </div>
-    {!! Toastr::message() !!}
 <!-- Add User Modal -->
 <div id="add_user" class="modal custom-modal fade" role="dialog">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">

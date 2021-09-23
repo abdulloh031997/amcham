@@ -11,17 +11,12 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
-    <!-- icheck bootstrap -->
-    <link rel="stylesheet" href="{{asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/plugins/fontawesome/css/fontawesome.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('assets/plugins/fontawesome/css/all.min.css')}}">
+	{{-- <link rel="stylesheet" href="{{asset('assets/css/feathericon.min.css')}}"> --}}
+	<link rel="stylesheet" href="{{asset('assets/plugins/morris/morris.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
@@ -33,10 +28,10 @@
             @yield('content')
         </main>
     </div>
-    <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
-<!-- Bootstrap 4 -->
-    <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <!-- AdminLTE App -->
-    <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
+    <script src="{{asset('assets/js/jquery-3.5.1.min.js')}}"></script>
+	<script src="{{asset('assets/js/popper.min.js')}}"></script>
+	<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+	<script src="{{asset('assets/plugins/slimscroll/jquery.slimscroll.min.js')}}"></script>
+	<script src="{{asset('assets/js/script.js')}}"></script>
 </body>
 </html>

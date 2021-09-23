@@ -96,7 +96,6 @@ class MenuController extends Controller
         $menu->position = $request->get('position');
         $menu->order_by = $request->order_by;
         $menu->save();
-        DB::commit();
         Toastr::success('Create new account successfully :)','Success');
         return redirect()->route('menus.index');
     }

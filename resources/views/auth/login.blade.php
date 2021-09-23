@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="login-box">
-        <!-- /.login-logo -->
-        <div class="card card-outline card-primary">
-          <div class="card-header text-center">
-            <a href="" class="h1"><b>Amcham Uzbekistan</b></a>
-          </div>
-          <div class="card-body">
-            <p class="login-box-msg">Sign in to start your session</p>
+<div class="main-wrapper login-body">
+    <div class="login-wrapper">
+        <div class="container">
+            <div class="loginbox">
+                <div class="login-left"> <img class="img-fluid" src="{{asset('amcham_logo.png')}}" alt="Logo"> </div>
+                <div class="login-right">
+                    <div class="login-right-wrap">
+                        <h1>Login</h1>
+                        <p class="account-subtitle">Access to our dashboard</p>
 
             <form method="POST" action="{{ route('login') }}">
                 @csrf
@@ -33,37 +33,24 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-8">
-                  <div class="icheck-primary">
-                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                    <label class="form-check-label" for="remember">
-                        {{ __('Remember Me') }}
-                    </label>
-                  </div>
-                </div>
-                <!-- /.col -->
-                <div class="col-4">
-                    <button type="submit" class="btn btn-primary">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary btn-block">
                         {{ __('Login') }}
                     </button>
                 </div>
-                <!-- /.col -->
               </div>
             </form>
-            <p class="mb-1">
+
+            <div class="text-center forgotpass">
                 @if (Route::has('password.request'))
                 <a class="btn btn-link" href="{{ route('password.request') }}">
                     {{ __('Forgot Your Password?') }}
                 </a>
-            @endif
-            </p>
-
-          </div>
-          <!-- /.card-body -->
+            @endif</div>
         </div>
-        <!-- /.card -->
-      </div>
-      <!-- /.login-box -->
+    </div>
+</div>
+</div>
+</div>
 </div>
 @endsection
