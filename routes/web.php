@@ -28,4 +28,6 @@ Route::prefix('admin')->group(function () {
     Route::resource('menus', MenuController::class);
     Route::post('menus/list', [App\Http\Controllers\Admin\MenuController::class, 'search'])->name('menus/list');
     Route::post('menus/create', [App\Http\Controllers\Admin\MenuController::class, 'store'])->name('menus/create');
+    Route::get('menus/delete/{id}', [App\Http\Controllers\Admin\MenuController::class, 'delete'])->name('delete');
+
 });

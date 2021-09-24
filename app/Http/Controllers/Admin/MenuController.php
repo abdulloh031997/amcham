@@ -42,11 +42,16 @@ class MenuController extends Controller
                     {
                         $result = Menu::where('status','LIKE','%'.$request->status.'%')->get();
                     }
+                    if($request->position)
+                    {
+                        $result = Menu::where('position','LIKE','%'.$request->position.'%')->get();
+                    }
                     // search by name and role name
-                    if($request->name && $request->status)
+                    if($request->name && $request->status && $request->position)
                     {
                         $result = Menu::where('name','LIKE','%'.$request->name.'%')
                                         ->where('status','LIKE','%'.$request->status.'%')
+                                        ->where('position','LIKE','%'.$request->position.'%')
                                         ->get();
                     }
 
@@ -89,6 +94,7 @@ class MenuController extends Controller
             'name' => 'required|string',
             'position'=>'required'
         ]);
+
         $menu = new Menu();
         $menu->name = $request->name;
         $menu->url = $request->url;
@@ -142,6 +148,7 @@ class MenuController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $project = Menu::find($id);
+        return view('backend.menus.delete', compact('project'));
     }
 }

@@ -11,7 +11,8 @@
 	<link rel="stylesheet" href="{{asset('assets/plugins/fontawesome/css/all.min.css')}}">
 	<link rel="stylesheet" href="{{asset('assets/plugins/fontawesome/css/fontawesome.min.css')}}">
 	<link rel="stylesheet" href="{{asset('assets/plugins/datatables/datatables.min.css')}}">
-	{{-- <link rel="stylesheet" href="{{asset('assets/css/feathericon.min.css')}}"> --}}
+	<link rel="stylesheet" href="{{asset('assets/css/feathericon.min.css')}}">
+    <link rel="shortcut icon" href="insert here">
 	<link rel="stylesheet" href="{{asset('assets/plugins/morris/morris.css')}}">
 	<link rel="stylesheet" href="{{asset('assets/css/style.css')}}"> </head>
     <link rel="stylesheet" href="{{ URL::to('assets/css/toastr.min.css') }}">
