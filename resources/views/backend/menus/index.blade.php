@@ -104,9 +104,9 @@ $i = 1;
                                                 <a href="" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i> Edit</a>
                                                 <a href="" class="btn btn-info btn-sm"><i class="fa fa-eye"></i> View</a>
                                                 <a href="" class="btn btn-danger btn-sm"><i class="fa fa-trash-restore"></i> Delete</a>
-                                                <a data-toggle="modal" id="smallButton" data-target="#smallModal" data-attr="{{ route('delete', $one->id) }}" title="Delete Project">
-                                                    <i class="fas fa-trash text-danger  fa-lg"></i>
-                                                </a>
+                                                <a href="{{ route('menus.destroy',$one->id) }}" class="btn btn-sm btn-outline-danger py-0" style="font-size: 0.8em;" id="deleteCompany" data-id="{{ $one->id }}">
+                                                    Delete
+                                                 </a>
                                             </th>
                                         </tr>
                                         @empty
@@ -145,31 +145,45 @@ $i = 1;
 @push('stylesheet')
 @push('javascript')
 <script>
-    // display a modal (small modal)
-    $(document).on('click', '#smallButton', function(event) {
-        event.preventDefault();
-        let href = $(this).attr('data-attr');
-        $.ajax({
-            url: href
-            , beforeSend: function() {
-                $('#loader').show();
-            },
-            // return the result
-            success: function(result) {
-                $('#smallModal').modal("show");
-                $('#smallBody').html(result).show();
-            }
-            , complete: function() {
-                $('#loader').hide();
-            }
-            , error: function(jqXHR, testStatus, error) {
-                console.log(error);
-                alert("Page " + href + " cannot open. Error:" + error);
-                $('#loader').hide();
-            }
-            , timeout: 8000
-        })
+
+$(document).ready(function () {
+
+$("body").on("click","#deleteCompany",function(e){
+
+   if(!confirm("Do you really want to do this?")) {
+      return false;
+    }
+
+   e.preventDefault();
+   var id = $(this).data("id");
+   // var id = $(this).attr('data-id');
+   var token = $("meta[name='csrf-token']").attr("content");
+   var url = e.target;
+
+   $.ajax(
+       {
+         url: url.href, //or you can use url: "company/"+id,
+         type: 'DELETE',
+         data: {
+           _token: token,
+               id: id
+       },
+       success: function (response){
+
+           $("#success").html(response.message)
+
+           Swal.fire(
+             'Remind!',
+             'Company deleted successfully!',
+             'success'
+           )
+       }
     });
+     return false;
+  });
+
+
+});
 
 </script>
 @endpush

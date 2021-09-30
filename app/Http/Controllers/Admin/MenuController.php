@@ -148,7 +148,10 @@ class MenuController extends Controller
      */
     public function destroy($id)
     {
-        $project = Menu::find($id);
-        return view('backend.menus.delete', compact('project'));
+        $menu = Menu::find($id);
+        $menu->delete();
+        return response()->json([
+            'message' => 'Data deleted successfully!'
+        ]);
     }
 }

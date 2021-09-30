@@ -32,7 +32,7 @@
             <div class="page-header">
 
                 <div class="row" id="upload">
-                   <div class="col-md-12">
+                   <div class="col-md-12" id="app">
                     @yield('content')
                    </div>
                 </div>
@@ -40,7 +40,7 @@
         </div>
     </div>
     </div>
-    <script src="{{asset('assets/js/jquery-3.5.1.min.js')}}"></script>
+    {{-- <script src="{{asset('assets/js/jquery-3.5.1.min.js')}}"></script> --}}
     <script src="{{asset('assets/js/popper.min.js')}}"></script>
     <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('assets/plugins/datatables/jquery.dataTables.min.js')}}"></script>
